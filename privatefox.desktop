@@ -1,6 +1,6 @@
 [Desktop Entry]
 Version=1.0
-Name=Privatefox Firefox BRowser
+Name=Privatefox Firefox Browser
 Comment=Password protected Firefox Browser
 Keywords=Internet;WWW;Browser;Web;Explorer
 Exec=privatefox %u

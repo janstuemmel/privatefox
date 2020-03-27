@@ -13,9 +13,9 @@ Password protected Firefox. A simple script to password-protect your firefox bro
 Asuming you're on a debian derivate. 
 
 ```sh
-sudo wget https://raw.githubusercontent.com/janstuemmel/privatefox/master/privatefox.sh -o /usr/local/bin/privatefox
+sudo wget https://raw.githubusercontent.com/janstuemmel/privatefox/master/privatefox.sh -O /usr/local/bin/privatefox
 sudo chmod +x /usr/local/bin/privatefox
-wget https://raw.githubusercontent.com/janstuemmel/privatefox/master/privatefox.desktop -o /.local/share/applications/privatefox.desktop
+wget https://raw.githubusercontent.com/janstuemmel/privatefox/master/privatefox.desktop -O ~/.local/share/applications/privatefox.desktop
 ```
 
 ## License 
