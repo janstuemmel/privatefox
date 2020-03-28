@@ -19,7 +19,7 @@ Check if `curl` or `wget` is installed on your machine and choose one of the fol
 ```sh
 wget https://github.com/janstuemmel/privatefox/archive/master.tar.gz -O - | tar zxf - && \
 sudo mv privatefox-master /opt/privatefox && \
-cp privatefox.desktop ~/.local/share/applications/privatefox.desktop
+cp /opt/privatefox/privatefox.desktop ~/.local/share/applications/privatefox.desktop
 ```
 
 #### `curl`
@@ -27,17 +27,17 @@ cp privatefox.desktop ~/.local/share/applications/privatefox.desktop
 ```sh
 curl -L https://github.com/janstuemmel/privatefox/archive/master.tar.gz | tar zxf - && \
 sudo mv privatefox-master /opt/privatefox && \
-cp privatefox.desktop ~/.local/share/applications/privatefox.desktop
+cp /opt/privatefox/privatefox.desktop ~/.local/share/applications/privatefox.desktop
 ```
 
 After installation, launch Privatefox with your window manager. The password is set on the first start. 
 
 ### Uninstall
 
-This simply removes all the files from privatefox
+This simply removes all the installed files without the encrypted profile directory.
 
 ```sh
-rm -rf ~/.privatefox ~/.local/share/applications/privatefox.desktop && \
+rm ~/.local/share/applications/privatefox.desktop && \
 sudo rm -rf /opt/privatefox 
 ```
 
