@@ -8,9 +8,13 @@ Password protected Firefox. A simple script to password-protect your firefox bro
 * Firefox browser
 * `encfs` for encryption
 
-## Install
+## Documentation
 
-### `wget`
+### Install
+
+Check if `curl` or `wget` is installed on your machine and choose one of the following scripts. Just copy and paste it into your terminal.
+
+#### `wget`
 
 ```sh
 wget https://github.com/janstuemmel/privatefox/archive/master.tar.gz -O - | tar zxf - && \
@@ -18,7 +22,7 @@ sudo mv privatefox-master /opt/privatefox && \
 cp privatefox.desktop ~/.local/share/applications/privatefox.desktop
 ```
 
-### `curl`
+#### `curl`
 
 ```sh
 curl -L https://github.com/janstuemmel/privatefox/archive/master.tar.gz | tar zxf - && \
@@ -26,12 +30,27 @@ sudo mv privatefox-master /opt/privatefox && \
 cp privatefox.desktop ~/.local/share/applications/privatefox.desktop
 ```
 
-## Uninstall
+After installation, launch Privatefox with your window manager. The password is set on the first start. 
+
+### Uninstall
+
+This simply removes all the files from privatefox
 
 ```sh
 rm -rf ~/.privatefox ~/.local/share/applications/privatefox.desktop && \
 sudo rm -rf /opt/privatefox 
 ```
+
+### Change password
+
+Close your Privatefox browser and open a terminal:
+
+```sh
+# goto privatefox config folder
+cd ~/.privatefox
+# use encfsctl to change your password
+encfsctl passwd profile.encrypted
+``` 
 
 ## Resources
 
