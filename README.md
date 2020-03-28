@@ -4,19 +4,38 @@ Password protected Firefox. A simple script to password-protect your firefox bro
 
 ## Requirements
 
-* `firefox` - Firefox browser has to be installed
-* `zenity` - A gui tool to ask for the password
-* `encfs` - Encrypt/Decrypt profile folder
+* A gtk desktop with `zentity` installed
+* Firefox browser
+* `encfs` for encryption
 
 ## Install
 
-Asuming you're on a debian derivate. 
+### `wget`
 
 ```sh
-sudo wget https://raw.githubusercontent.com/janstuemmel/privatefox/master/privatefox.sh -O /usr/local/bin/privatefox
-sudo chmod +x /usr/local/bin/privatefox
-wget https://raw.githubusercontent.com/janstuemmel/privatefox/master/privatefox.desktop -O ~/.local/share/applications/privatefox.desktop
+wget https://github.com/janstuemmel/privatefox/archive/master.tar.gz -O - | tar zxf - && \
+sudo mv privatefox-master /opt/privatefox && \
+cp privatefox.desktop ~/.local/share/applications/privatefox.desktop
 ```
+
+### `curl`
+
+```sh
+curl -L https://github.com/janstuemmel/privatefox/archive/master.tar.gz | tar zxf - && \
+sudo mv privatefox-master /opt/privatefox && \
+cp privatefox.desktop ~/.local/share/applications/privatefox.desktop
+```
+
+## Uninstall
+
+```sh
+rm -rf ~/.privatefox ~/.local/share/applications/privatefox.desktop && \
+sudo rm -rf /opt/privatefox 
+```
+
+## Resources
+
+Icon made by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](http://www.flaticon.com/)
 
 ## License 
 

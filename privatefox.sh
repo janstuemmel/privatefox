@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONFIG=$HOME/.privateFox
+CONFIG=$HOME/.privatefox
 
 mkdir -p $CONFIG/profile.encrypted $CONFIG/profile
 
